@@ -1,16 +1,14 @@
-# React + Vite
+Backlog Manager allows you to add media, such as movies and series, as well as video games to your backlog. It can be used as a tool to help you prioritize what you would like to finish or watch next, while also updating the progress on the current thing. It can be set to "in progress" or "completed", and you can also update it to "dropped" in case you didn't like it while watching or playing it. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+User Stories: 
+⦁	As a user, I want to be able to sign up, log in, and log out.
 
-Currently, two official plugins are available:
+⦁	As a user, I want to be able to create a backlog and add items to it
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⦁	As a user, I want to be able to track the items in my backlog, and add a priority to them
 
-## React Compiler
+⦁	As a user, I want to be able to add my progress to the item (in progress, completed, dropped)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⦁	As a user, I want to be able to edit and delete the items in my backlog
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![backlog ERD](https://github.com/user-attachments/assets/fd6c5175-4bb0-400f-acdd-711ae58fc80e)
