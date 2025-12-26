@@ -21,7 +21,6 @@ const signUp = async (formData) => {
 
     if (data.token) {
       localStorage.setItem('token', data.token);
-      console.log(data.token)
       return JSON.parse(atob(data.token.split('.')[1]))
     }
 
@@ -58,7 +57,19 @@ const signIn = async (formData) => {
   }
 };
 
-export {
-  signUp, signIn
+const getUser = () => {
+  const token = localStorage.getItem('token');
+  if (!token) return null;
+  const payload = JSON.parse(atob(token.split('.')[1]));
+  if (payload.exp < Date.now() / 1000) {
+    localStorage.removeItem('token');
+    return null;
+  }
+  return payload;
 };
 
+const signOut = () => {
+  localStorage.removeItem('token');
+};
+
+export { signUp, signIn, getUser, signOut };
